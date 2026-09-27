@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+
+# ReadWriteOnce  → RWO
+# ReadOnlyMany   → ROX
+# ReadWriteMany  → RWX
+
+metadata:
+  name: app-data
+
+spec:
+  accessModes:
+    - ReadWriteOnce # It means the volume can be mounted read-write by a single node at a time.
+
+  resources:
+    requests:
+      storage: 1Gi

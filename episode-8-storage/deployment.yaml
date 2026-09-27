@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: storage-demo
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: storage-demo
+
+  template:
+    metadata:
+      labels:
+        app: storage-demo
+
+    spec:
+      containers:
+        - name: app
+          image: busybox
+          command: ["sh", "-c", "sleep 3600"]
+
+          volumeMounts:
+            - name: app-storage
+              mountPath: /data
+
+      volumes:
+        - name: app-storage
+          persistentVolumeClaim:
+            claimName: app-data

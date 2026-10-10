@@ -12,10 +12,10 @@ nodes:
             node-labels: "ingress-ready=true"
     # Forward localhost:80 / localhost:443 on your machine into this node
     extraPortMappings:
-      - containerPort: 80
+      - containerPort: 80 # HTTP
         hostPort: 80
         protocol: TCP
-      - containerPort: 443
+      - containerPort: 443 # HTTPS
         hostPort: 443
         protocol: TCP
   - role: worker

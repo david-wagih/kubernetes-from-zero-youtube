@@ -26,7 +26,7 @@ All concepts in the series are explained using this Excalidraw board. Keep it op
 | 07 | ConfigMaps & Secrets | [`episode-07-configmaps-secrets`](episode-07-configmaps-secrets) | ConfigMap, Secret, a Deployment that consumes both via `envFrom`, and a sample FastAPI app |
 | 08 | Storage | [`episode-08-storage`](episode-08-storage) | `emptyDir` Pod, PersistentVolumeClaim, Deployment mounting the PVC |
 | 09 | StatefulSets | [`episode-09-statefulsets`](episode-09-statefulsets) | nginx StatefulSet with `volumeClaimTemplates` + headless Service |
-| 10 | Ingress | _coming soon_ | |
+| 10 | Ingress | [`episode-10-ingress`](episode-10-ingress) | kind cluster with port mappings, NGINX Ingress controller, path/host-based routing and TLS |
 
 The [`setup/`](setup) folder has the kind cluster config (1 control plane + 2 workers) used throughout the series.
 
